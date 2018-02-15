@@ -34,7 +34,6 @@ function createMap(geoJson) {
 fetch('gz_2010_us_050_00_5m.json', {method: 'get'})
   .then(response => response.json())
   .then(Map => {
-    geoJson=Map;
-    createMap(geoJson)
+    createMap(Map)
   })
   .catch(err => console.log(err))

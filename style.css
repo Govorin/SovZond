@@ -1,16 +1,12 @@
 .header{
     width: 100%;
-    position: fixed;
     height: 100px;
-    right: 0;
-    top: 0;
 }
 
 .logo{
     background: url("https://sovzond.ru/bitrix/templates/main/images/logo_ru.png");
 }
 #map{
-    margin-top: 100px;
     width: 100%;
     height: 800px ;
 }
