@@ -1,5 +1,5 @@
-function createMap(geoJson) {
-  let map = L.map('map').setView([0, 0], 1);
+const createMap=geoJson=> {
+  let map = L.map('map').setView([0, 0], 3);
   L.geoJSON(geoJson,{
     style: style,
     onEachFeature: onEachFeature
@@ -33,7 +33,5 @@ function createMap(geoJson) {
 }
 fetch('gz_2010_us_050_00_5m.json', {method: 'get'})
   .then(response => response.json())
-  .then(Map => {
-    createMap(Map)
-  })
+  .then(map => createMap(map))
   .catch(err => console.log(err))
